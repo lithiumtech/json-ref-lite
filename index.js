@@ -6,9 +6,11 @@
 
   request = (fs && fs.existsSync(__dirname + '/../sync-request') ? require('sync-request') : false);
 
-  expr = require('property-expr');
+  // Inline expand the property-expr library
+  expr = (function(){var t=/[^.^\]^[]+|(?=\[\]|\.\.)/g,n=/^\d+$/,r=/^\d/,e=/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g,u={},c={};function a(t,n,r){var e,u,c,a,f=t.length;for(u=0;u<f;u++)(e=t[u])&&(o(e)&&(e='"'+e+'"'),c=!(a=i(e))&&/^\d+$/.test(e),n.call(r,e,a,c,u,t))}function i(t){return"string"==typeof t&&t&&-1!==["'",'"'].indexOf(t.charAt(0))}function o(t){return!i(t)&&(function(t){return t.match(r)&&!t.match(n)}(t)||function(t){return e.test(t)}(t))}return{expr:f,setter:function(t){return u[t]||(u[t]=new Function("data, value",f(t,"data")+" = value"))},getter:function(t,n){var r=t+"_"+n;return c[r]||(c[r]=new Function("data","return "+f(t,n,"data")))},split:function(n){return n.match(t)},join:function(t){return t.reduce(function(t,r){return t+(i(r)||n.test(r)?"["+r+"]":(t?".":"")+r)},"")},forEach:function(n,r,e){a(n.match(t),r,e)}};function f(n,r,e){return"string"==typeof r&&(e=r,r=!1),e=e||"data",(n=n||"")&&"["!==n.charAt(0)&&(n="."+n),r?function(n,r){var e,u=r,c=n.match(t);return a(c,function(t,n,r,c,a){e=c===a.length-1,u+=(t=n||r?"["+t+"]":"."+t)+(e?")":" || {})")}),new Array(c.length+1).join("(")+u}(n,e):e+n}})();
 
-  module.exports = (function() {
+  // Namespace under the LITHIUM object
+  LITHIUM.jsonRefLite = (function() {
     this.cache = {};
     this.extendtoken = '$extend';
     this.reftoken = '$ref';
