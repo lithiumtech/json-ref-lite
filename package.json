@@ -5,36 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-    "test": "coffee test/test.coffee > test/test.now ; diff --brief test/test.now test/test.out && echo 'test OK' || exit 1",
-    "browser": "/bin/bash -c 'coffee -c *.coffee test/*.coffee && browserify -r .:json-ref-lite | uglifyjs -o json-ref-lite.min.js'"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lithiumtech/json-ref-lite"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lithiumtech/json-ref-lite/issues"
-  },
-  "browser": {
-    "sync-request": false,
-    "fs": false
-  },
-  "keywords": [
-    "json",
-    "jsonschema",
-    "ref",
-    "json pointers",
-    "jsonpointer",
-    "jsonref",
-    "$ref",
-    "resolve",
-    "remote reference",
-    "json jsonschema ref json pointers jsonref remote reference lightweight",
-    "circular",
-    "graph"
-  ],
-  "homepage": "https://github.com/coderofsalvation/json-ref-lite"
+  }
 }
