@@ -8,5 +8,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lithiumtech/json-ref-lite"
-  }
+  },
+  "private": true
 }
