@@ -1,7 +1,7 @@
 {
   "name": "lithium-json-ref-lite",
   "version": "0.0.1",
-  "description":"Extremely light weight way to resolve jsonschema '$ref' references & inheritance: create circular/graphs, fractals from json (browser/coffeescript/javascript).",
+  "description":"Fork of json-ref-lite",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
