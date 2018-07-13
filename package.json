@@ -1,7 +1,7 @@
 {
   "name": "lithium-json-ref-lite",
   "version": "0.0.1",
-  "description":"Fork of json-ref-lite",
+  "description":"Fork of json-ref-lite to browserify and namespace under LITHIUM",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
@@ -9,5 +9,11 @@
     "type": "git",
     "url": "https://github.com/lithiumtech/json-ref-lite"
   },
-  "private": true
+  "keywords": [],
+  "bugs": "https://github.com/lithiumtech/lithium-json-ref-lite/pulls",
+  "license": "ISC",
+  "author": "Leon van Kammen",
+  "contributors": ["Adam Ayres"],
+  "homepage": "https://github.com/lithiumtech/lithium-json-ref-lite",
+  "engines": {}
 }
