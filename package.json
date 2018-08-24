@@ -1,6 +1,6 @@
 {
   "name": "lithium-json-ref-lite",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Fork of json-ref-lite to browserify and namespace under LITHIUM",
   "main": "index.js",
   "dependencies": {},
